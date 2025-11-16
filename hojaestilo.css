@@ -94,6 +94,152 @@ img {
   height: auto;
 }
 
+/* ==========================================
+   Videos Section Styles
+   ========================================== */
+
+.videosSection {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+}
+
+.videosSection .sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+.sectionSubtitle {
+  text-align: center;
+  color: #64748b;
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.videosGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.videoCard {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.videoCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  background: #000;
+}
+
+.videoWrapper iframe,
+.videoWrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.videoContent {
+  padding: 25px;
+}
+
+.videoTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.videoTitle i {
+  color: #14b8a6;
+}
+
+.videoDescription {
+  color: #64748b;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.videoStats {
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.videoStat {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.videoStat i {
+  color: #14b8a6;
+}
+
+/* Responsive Design for Videos */
+@media (max-width: 768px) {
+  .videosSection {
+    padding: 50px 15px;
+  }
+
+  .videosSection .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .videosGrid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .videoTitle {
+    font-size: 1.2rem;
+  }
+
+  .videoContent {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .videosSection .sectionTitle {
+    font-size: 1.7rem;
+  }
+
+  .videoStats {
+    flex-wrap: wrap;
+  }
+
+  .videosGrid {
+    grid-template-columns: 1fr;
+  }
+}
 /*-----------------------------------*\
   #general-styles
 \*-----------------------------------*/
